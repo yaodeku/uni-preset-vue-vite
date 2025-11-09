@@ -1,16 +1,25 @@
 {
-	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
-		{
-			"path": "pages/index/index",
-			"style": {
-				"navigationBarTitleText": "uni-app"
-			}
-		}
-	],
-	"globalStyle": {
-		"navigationBarTextStyle": "black",
-		"navigationBarTitleText": "uni-app",
-		"navigationBarBackgroundColor": "#F8F8F8",
-		"backgroundColor": "#F8F8F8"
-	}
+  "pages": [
+    { "path": "pages/index/index", "style": { "navigationBarTitleText": "uni-app" } },
+    { "path": "pages/auth/login", "style": { "navigationBarTitleText": "登录" } },
+    { "path": "pages/auth/register", "style": { "navigationBarTitleText": "注册" } },
+    { "path": "pages/user/profile", "style": { "navigationBarTitleText": "个人资料" } },
+    { "path": "pages/workspaces/index", "style": { "navigationBarTitleText": "工作空间" } },
+    { "path": "pages/workspaces/detail", "style": { "navigationBarTitleText": "工作空间详情" } },
+    { "path": "pages/projects/index", "style": { "navigationBarTitleText": "项目" } },
+    { "path": "pages/projects/detail", "style": { "navigationBarTitleText": "项目详情" } },
+    { "path": "pages/tasks/index", "style": { "navigationBarTitleText": "任务" } },
+    { "path": "pages/tasks/detail", "style": { "navigationBarTitleText": "任务详情" } },
+    { "path": "pages/tags/index", "style": { "navigationBarTitleText": "标签" } },
+    { "path": "pages/comments/index", "style": { "navigationBarTitleText": "评论" } },
+    { "path": "pages/attachments/index", "style": { "navigationBarTitleText": "附件 / 美术资产" } },
+    { "path": "pages/notifications/index", "style": { "navigationBarTitleText": "通知" } },
+    { "path": "pages/search/index", "style": { "navigationBarTitleText": "搜索" } }
+  ],
+  "globalStyle": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "uni-app",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  }
 }
