@@ -36,14 +36,25 @@
         </view>
       </view>
     </view>
+    <button class="nav-btn" @click="goToRegister">去注册</button>
   </view>
 </template>
 
 <script>
 export default {
   data() {
-    return { title: '仪表盘' }
-  }
+    return {
+      title: 'Hello',
+    }
+  },
+  onLoad() {},
+  methods: {
+    goToRegister() {
+      uni.navigateTo({
+        url: '/pages/register/register'
+      })
+    }
+  },
 }
 </script>
 
@@ -85,15 +96,21 @@ export default {
 .content-body{ padding:24rpx; }
 .page-heading{ font-size:34rpx; color:#424242; margin-bottom:16rpx }
 
-.card-grid{ display:grid; grid-template-columns: repeat(3, 1fr); gap:16rpx; max-width:1100rpx }
-.card{ display:flex; align-items:center; justify-content:center; height:140rpx; background:#fff; border-radius:12rpx; color:#333; box-shadow:0 2rpx 6rpx rgba(0,0,0,0.04) }
-
-/* Responsive: collapse sidebar on narrow screens */
-@media (max-width: 640px){
-  .app-root{ flex-direction:column }
-  .sidebar{ width:100%; flex-direction:row; padding:12rpx; gap:12rpx; overflow:auto }
-  .sidebar-nav{ flex-direction:row }
-  .card-grid{ grid-template-columns: repeat(2, 1fr) }
+.text-area {
+  display: flex;
+  justify-content: center;
 }
 
+.title {
+  font-size: 36rpx;
+  color: #8f8f94;
+}
+
+.nav-btn {
+  margin-top: 30rpx;
+  background-color: #007AFF;
+  color: #ffffff;
+  border-radius: 45rpx;
+  padding: 20rpx 60rpx;
+}
 </style>
