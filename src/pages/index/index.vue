@@ -4,6 +4,7 @@
     <view class="text-area">
       <text class="title">{{ title }}</text>
     </view>
+    <button class="nav-btn" @click="goToRegister">去注册</button>
   </view>
 </template>
 
@@ -15,7 +16,13 @@ export default {
     }
   },
   onLoad() {},
-  methods: {},
+  methods: {
+    goToRegister() {
+      uni.navigateTo({
+        url: '/pages/register/register'
+      })
+    }
+  },
 }
 </script>
 
@@ -44,5 +51,13 @@ export default {
 .title {
   font-size: 36rpx;
   color: #8f8f94;
+}
+
+.nav-btn {
+  margin-top: 30rpx;
+  background-color: #007AFF;
+  color: #ffffff;
+  border-radius: 45rpx;
+  padding: 20rpx 60rpx;
 }
 </style>

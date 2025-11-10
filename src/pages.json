@@ -5,6 +5,12 @@
 			"style": {
 				"navigationBarTitleText": "uni-app"
 			}
+		},
+		{
+			"path": "pages/register/register",
+			"style": {
+				"navigationBarTitleText": "注册"
+			}
 		}
 	],
 	"globalStyle": {
