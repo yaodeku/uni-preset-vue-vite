@@ -34,41 +34,8 @@
   </layout>
 </template>
 
-<script>
-import { apiGet, apiPost, apiDelete } from '../../services/http.js'
-import Layout from '../../components/Layout.vue'
-export default {
-  components:{ Layout },
-  data(){return{ attached_to_type:'task', attached_to_id:'', file_name:'', storage_key:'', content_type:'image/png', file_size:0, attachments:[] }},
-  onShow(){ this.fetch() },
-  methods:{
-    async fetch(){ const res = await apiGet('/attachments'); if(res.statusCode===200) this.attachments = res.data.data||[] },
-    async upload(){ if(!this.attached_to_id||!this.file_name||!this.storage_key){ uni.showToast({ title:'请填写信息', icon:'none' }); return } const res = await apiPost('/attachments', { attached_to_type:this.attached_to_type, attached_to_id:this.attached_to_id, file_name:this.file_name, storage_key:this.storage_key, content_type:this.content_type, file_size:this.file_size||0 }); if(res.statusCode===200){ this.reset(); this.fetch(); uni.showToast({ title:'已添加', icon:'success' }) } },
-    async remove(id){ const res = await apiDelete(`/attachments/${id}`, {}); if(res.statusCode===200) this.fetch() },
-    previewUrl(a){ return a.storage_key },
-    isImage(ct){ return (ct||'').startsWith('image/') },
-    reset(){ this.file_name=''; this.storage_key=''; this.content_type='image/png'; this.file_size=0 }
-  }
-}
+<script src="./index.js">
 </script>
 
-<style>
-.page-root{ padding:24rpx }
-.page-card{ background:#fff; border-radius:12rpx; box-shadow:0 8rpx 24rpx rgba(8,28,45,0.06); overflow:hidden }
-.card-header{ padding:20rpx 24rpx; border-bottom:1rpx solid #f1f5f9 }
-.page-title{ font-size:32rpx; color:#111827 }
-.card-body{ padding:20rpx }
-.upload-row{ display:flex; gap:12rpx; flex-wrap:wrap; margin-bottom:16rpx }
-.input-sm{ padding:12rpx; border-radius:8rpx; border:1rpx solid #e6e9ee }
-.btn-primary{ background:#2563eb; color:#fff; padding:10rpx 16rpx; border-radius:10rpx }
-
-.assets-grid{ display:grid; grid-template-columns: repeat(3, 1fr); gap:16rpx }
-.asset-card{ background:#fff; border-radius:10rpx; padding:12rpx; box-shadow:0 4rpx 12rpx rgba(8,28,45,0.04); display:flex; gap:12rpx; align-items:center }
-.asset-thumb{ width:120rpx; height:120rpx; border-radius:8rpx; background:#f8f8f8 }
-.asset-info{ flex:1 }
-.item-title{ font-size:26rpx; color:#0f172a }
-.item-sub{ color:#6b7280 }
-.btn-danger{ background:#ef4444; color:#fff; padding:8rpx 10rpx; border-radius:8rpx }
-
-@media (max-width:640px){ .assets-grid{ grid-template-columns: repeat(1, 1fr) } }
+<style src="./index.css">
 </style>
