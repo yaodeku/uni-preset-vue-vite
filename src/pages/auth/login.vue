@@ -5,8 +5,8 @@
       <text class="auth-title">登录到 Uni Workspace</text>
 
       <view class="form-row">
-        <label class="field-label">用户名</label>
-        <input class="input-control" v-model="username" placeholder="请输入用户名" />
+        <label class="field-label">邮箱</label>
+        <input class="input-control" v-model="email" placeholder="请输入邮箱地址" />
       </view>
 
       <view class="form-row">

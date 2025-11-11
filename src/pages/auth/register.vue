@@ -6,7 +6,7 @@
 
       <view class="form-row">
         <label class="field-label">用户名</label>
-        <input class="input-control" v-model="username" placeholder="选择一个用户名" />
+        <input class="input-control" v-model="username" placeholder="输入用户名" />
       </view>
 
       <view class="form-row">

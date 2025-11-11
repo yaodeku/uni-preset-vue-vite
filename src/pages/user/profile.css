@@ -1,6 +1,35 @@
-.profile-container{ padding: 24rpx }
-.screen-title{ font-size: 36rpx; color: #333; margin: 24rpx 0 }
-.form-field{ margin: 12rpx 0 }
-.text-input{ border: 1px solid #c8c7cc; border-radius: 6rpx; padding: 16rpx }
-.primary-button{ background-color: #007aff; color: #fff; border-radius: 6rpx; padding: 16rpx; margin-top: 16rpx }
-.danger-button{ background-color: #dd524d; color:#fff; border-radius:6rpx; padding:16rpx; margin-top: 12rpx }
+.profile-container { 
+  padding: 24rpx; 
+}
+
+.screen-title { 
+  font-size: 36rpx; 
+  color: #333; 
+  margin: 24rpx 0; 
+}
+
+.form-field { 
+  margin: 12rpx 0; 
+}
+
+.text-input { 
+  border: 1px solid #c8c7cc; 
+  border-radius: 6rpx; 
+  padding: 16rpx; 
+}
+
+.primary-button { 
+  background-color: #007aff; 
+  color: #fff; 
+  border-radius: 6rpx; 
+  padding: 16rpx; 
+  margin-top: 16rpx; 
+}
+
+.danger-button { 
+  background-color: #dd524d; 
+  color: #fff; 
+  border-radius: 6rpx; 
+  padding: 16rpx; 
+  margin-top: 12rpx; 
+}

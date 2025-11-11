@@ -1,5 +1,5 @@
 <template>
-  <layout page-title="工作空间">
+  <Layout page-title="工作空间">
     <view class="page-root">
       <view class="page-card">
         <view class="card-header">
@@ -27,7 +27,7 @@
         </view>
       </view>
     </view>
-  </layout>
+  </Layout>
 </template>
 
 <script src="./index.js">

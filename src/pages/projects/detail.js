@@ -1,18 +1,50 @@
 import { apiGet, apiPut } from '../../services/http.js'
 import Layout from '../../components/Layout.vue'
+
+/**
+ * 项目详情页面
+ * 显示和编辑项目详细信息
+ */
 export default { 
-  components:{ Layout }, 
-  data(){return{ id:'', project:null }},
-  async onLoad(q){ 
-    this.id=q.id; 
-    const res = await apiGet(`/projects/${this.id}`); 
-    if(res.statusCode===200) this.project = res.data.data 
+  components: { 
+    Layout 
   }, 
-  methods:{ 
-    async save(){ 
-      const res = await apiPut(`/projects/${this.id}`, { title:this.project.title, description:this.project.description }); 
-      if(res.statusCode===200){ 
-        uni.showToast({ title:'已保存', icon:'success' }) 
+  
+  data() {
+    return { 
+      id: '', 
+      project: null 
+    }
+  },
+  
+  /**
+   * 页面加载时获取项目详情
+   * @param {Object} q - 页面参数
+   */
+  async onLoad(q) { 
+    this.id = q.id
+    const res = await apiGet(`/projects/${this.id}`)
+    if (res.statusCode === 200) {
+      this.project = res.data.data 
+    }
+  }, 
+  
+  methods: { 
+    /**
+     * 保存项目信息
+     * 将修改后的项目信息保存到服务器
+     */
+    async save() { 
+      const res = await apiPut(`/projects/${this.id}`, { 
+        title: this.project.title, 
+        description: this.project.description 
+      })
+      
+      if (res.statusCode === 200) { 
+        uni.showToast({ 
+          title: '已保存', 
+          icon: 'success' 
+        }) 
       } 
     } 
   } 
