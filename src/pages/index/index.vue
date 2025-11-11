@@ -1,63 +1,22 @@
 <template>
-  <view class="content">
-    <image class="logo" src="/static/logo.png"></image>
-    <view class="text-area">
-      <text class="title">{{ title }}</text>
+  <layout page-title="首页">
+    <view class="content-wrapper">
+      <text class="page-heading">欢迎使用 Uni Workspace</text>
+      <view class="card-grid">
+        <navigator url="/pages/auth/login" class="card">登录</navigator>
+        <navigator url="/pages/auth/register" class="card">注册</navigator>
+        <navigator url="/pages/user/profile" class="card">个人资料</navigator>
+        <navigator url="/pages/workspaces/index" class="card">工作空间</navigator>
+        <navigator url="/pages/projects/index" class="card">项目</navigator>
+        <navigator url="/pages/tasks/index" class="card">任务</navigator>
+      </view>
+      <button class="nav-btn" @click="goToRegister">去注册</button>
     </view>
-    <button class="nav-btn" @click="goToRegister">去注册</button>
-  </view>
+  </layout>
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-      title: 'Hello',
-    }
-  },
-  onLoad() {},
-  methods: {
-    goToRegister() {
-      uni.navigateTo({
-        url: '/pages/register/register'
-      })
-    }
-  },
-}
+<script src="./index.js">
 </script>
 
-<style>
-.content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.logo {
-  height: 200rpx;
-  width: 200rpx;
-  margin-top: 200rpx;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 50rpx;
-}
-
-.text-area {
-  display: flex;
-  justify-content: center;
-}
-
-.title {
-  font-size: 36rpx;
-  color: #8f8f94;
-}
-
-.nav-btn {
-  margin-top: 30rpx;
-  background-color: #007AFF;
-  color: #ffffff;
-  border-radius: 45rpx;
-  padding: 20rpx 60rpx;
-}
+<style src="./index.css" scoped>
 </style>

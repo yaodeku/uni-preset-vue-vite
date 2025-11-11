@@ -1,0 +1,32 @@
+.content-wrapper {
+  padding: 24rpx;
+}
+
+.page-heading {
+  font-size: 34rpx;
+  color: #424242;
+  margin-bottom: 16rpx;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200rpx, 1fr));
+  gap: 20rpx;
+  margin-top: 30rpx;
+}
+
+.card {
+  padding: 30rpx 20rpx;
+  background: #ffffff;
+  border-radius: 10rpx;
+  text-align: center;
+  box-shadow: 0 2rpx 12rpx rgba(0,0,0,0.05);
+}
+
+.nav-btn {
+  margin-top: 30rpx;
+  background-color: #007AFF;
+  color: #ffffff;
+  border-radius: 45rpx;
+  padding: 20rpx 60rpx;
+}
